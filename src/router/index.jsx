@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Login from '../views/Login';
+import Login from '../views/Login/Login';
 import About from '../views/About';
 
 const AppRouter = () => (
