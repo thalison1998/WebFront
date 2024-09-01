@@ -4,9 +4,11 @@ import logo from '../../assets/react.svg';
 import { useAuthToken } from '../../hooks/useAuthToken';
 import { login } from '../../services/authService/authService';
 import './LoginForm.css';
+import { useNavigate } from 'react-router-dom';
 
 const LoginForm = () => {
   const { saveToken } = useAuthToken();
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     username: '',
@@ -46,6 +48,7 @@ const LoginForm = () => {
       try {
         const token = await login(username, password);
         saveToken(token);
+        navigate('/home');
       } catch (error) {
         setError(error.message);
       } finally {
