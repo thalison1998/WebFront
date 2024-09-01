@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Login.css';
-import LoginForm from '../../components/LoginForm/LoginForm.jsx';
+import LoginForm from '../../components/loginForm/LoginForm.jsx';
 
 const Login = () => {
   return (
