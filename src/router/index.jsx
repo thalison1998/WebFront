@@ -1,16 +1,14 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Login from '../views/Login';
-import About from '../views/About';
+import { Route, Routes } from 'react-router-dom';
+import Login from '../views/login/Login';
+import Home from '../views/home/Home';
+import ProtectedRoute from './protectedRoute';
 
 const AppRouter = () => (
-  <Router>
-    <Routes>
-      <Route path="/" element={<Login />} />
-      <Route path="/about" element={<About />} />
-    </Routes>
-  </Router>
+  <Routes>
+    <Route path="/" element={<Login />} />
+    <Route path="/home" element={<ProtectedRoute element={<Home />} redirect={<Login />} />} />
+  </Routes>
 );
 
 export default AppRouter;
-
