@@ -1,0 +1,25 @@
+.login-container {
+    height: 100vh;
+    display: flex;
+}
+
+.login-cover {
+    background: url('../../assets/react.svg') no-repeat center center;
+    background-size: cover;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.cover-content {
+    text-align: center;
+}
+
+@media (max-width: 767.98px) {
+    .login-cover {
+        display: none;
+    }
+}
