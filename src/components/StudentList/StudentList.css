@@ -1,7 +1,6 @@
-/* Adicione isso ao seu arquivo CSS */
 .table {
   margin-bottom: 0;
-  overflow-x: auto; /* Permite rolagem horizontal */
+  overflow-x: auto;
 }
 
 .table td,
@@ -51,20 +50,18 @@
   }
 }
 
-/* Estilos para a tabela de ações */
 .table-actions .btn {
   margin-right: 5px;
 }
 
-/* Estilos para a paginação */
 .pagination {
   display: flex;
   justify-content: center;
-  margin-top: 20px; /* Distância da tabela */
+  margin-top: 20px; 
 }
 
 .pagination .page-item {
-  margin: 0 2px; /* Espaçamento entre os itens de paginação */
+  margin: 0 2px;
 }
 
 .pagination .page-link {
@@ -74,21 +71,20 @@
 }
 
 .pagination .page-link:hover {
-  background-color: #e9ecef; /* Cor de fundo ao passar o mouse */
+  background-color: #e9ecef; 
 }
 
 .pagination .page-item.active .page-link {
-  background-color: #007bff; /* Cor de fundo do item ativo */
-  border-color: #007bff; /* Cor da borda do item ativo */
-  color: white; /* Cor do texto do item ativo */
+  background-color: #007bff; 
+  border-color: #007bff;
+  color: white; 
 }
 
 .pagination .page-item.disabled .page-link {
-  background-color: #f8f9fa; /* Cor de fundo do item desativado */
-  color: #6c757d; /* Cor do texto do item desativado */
+  background-color: #f8f9fa;
+  color: #6c757d;
 }
 
-/* Garantir que a coluna de ações não seja cortada */
 .table td.actions-column {
   min-width: 150px;
   text-align: center;
