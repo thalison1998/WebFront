@@ -1,13 +1,13 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://localhost:7297/api/v1/Student',
+  baseURL: import.meta.env.VITE_API_BASE_URL,
 });
 
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('authToken');
-
-  if (token) {
+  
+  if (token && config.url !== 'Auth/login') {
     config.headers.Authorization = `Bearer ${token}`;
   }
 

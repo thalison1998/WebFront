@@ -2,7 +2,7 @@ import api from '../api/api';
 
 export const fetchStudents = async () => {
   try {
-    const response = await api.get('/');
+    const response = await api.get('Student');
     const students = response.data;
     return students;
   } catch (error) {
@@ -18,7 +18,7 @@ export const fetchStudents = async () => {
 
 export const deleteStudent = async (id) => {
   try {
-    const response = await api.delete(`/${id}`);
+    const response = await api.delete(`Student/${id}`);
     if (response.status === 200) {
       return { success: true, message: response.data.message };
     } else {
@@ -37,7 +37,7 @@ export const deleteStudent = async (id) => {
 
 export const addStudent = async (studentData) => {
   try {
-    const response = await api.post('', studentData);
+    const response = await api.post('Student', studentData);
     if (response.status === 200) {
       return { success: true, message: 'Student added successfully.' };
     } else {
@@ -57,7 +57,7 @@ export const addStudent = async (studentData) => {
 export const updateStudent = async (studentData) => {
  
   try {
-    const response = await api.put('',studentData);
+    const response = await api.put('Student',studentData);
     if (response.status === 200) {
       return { success: true, message: 'Student updated successfully.' };
     } else {
@@ -77,7 +77,7 @@ export const updateStudent = async (studentData) => {
 
 export const getStudentById = async (id) => {
   try {
-    const response = await api.get(`/${id}`);
+    const response = await api.get(`Student/${id}`);
     const student = response.data;
     return student;
   } catch (error) {
