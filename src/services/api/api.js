@@ -19,7 +19,7 @@ api.interceptors.request.use((config) => {
 api.interceptors.response.use((response) => {
   return response;
 }, (error) => {
-  if (error.response && error.response.status === 401) {
+  if (error.response && error.response.status === 401 && error.response.config.url !==  'Auth/login' ) {
     localStorage.removeItem('authToken');
     window.location.href = '/';
   }
